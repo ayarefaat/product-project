@@ -1,0 +1,24 @@
+<section>
+  <div class="container">
+    <h1 class="text-center">Our Products</h1>
+    <div class="card">
+      <div class="card-body">
+        <h3>Carts</h3>
+        <h4>Total no of products : {{totalProducts}}</h4>
+        <h6 class="text-muted">{{name | uppercase}}</h6>
+        <div class="row my-4">
+          <div class="col-md-4" *ngFor="let item of [1,2,3]">
+            <app-product [img]="img1" (noProduct)="addProduct($event)" (removeProduct)="removeTotalProduct($event)"></app-product>
+          </div>
+          <!-- <div class="col-md-4">
+            <app-product [img]="img1" (noProduct)="addProduct($event)"></app-product>
+          </div>
+          <div class="col-md-4">
+            <app-product [img]="img2" (noProduct)="addProduct($event)"></app-product>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

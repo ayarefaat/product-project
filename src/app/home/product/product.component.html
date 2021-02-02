@@ -1,0 +1,13 @@
+<div class="card ">
+      <div class="card-body">
+        <img [src]=img alt="" width="100%" >
+        <h5 class="text-danger card-title">Product</h5>
+        <p class="card-text">number of products : {{nProducts}}</p>
+        <app-rating [stars]="myRating" (starChanged)=onRatingChanged($event)></app-rating><br><br>
+        <h6 class="text-muted">Rating : {{x}}</h6>
+        <button  class="btn btn-success mr-2" (click)="buy()">Buy</button>
+        <button  class="btn btn-danger " (click)="remove()">Remove</button>
+      </div>
+</div>
+
+
